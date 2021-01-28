@@ -1,0 +1,78 @@
+:root {
+--normalWhite: hsl(0, 0%, 100%);
+--Black: hsl(0, 0%, 0%);
+--Dark-Gray: hsl(0, 0%, 55%);
+--Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+
+body,ul,li,a,p,h1,h2,h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+li  {
+    list-style-type: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.menu {
+    background-image: url("../img/image-hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 32px 0 128px 0;
+}
+
+
+.menu-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-menu li a {
+    padding: 8px 16px;
+    color: var(--normalWhite);
+    font-family: 'Alata', sans-serif;
+}
+
+.intro {
+    border: 1px solid var(--normalWhite); 
+    max-width: max-content;
+    text-align: left;
+    padding: 16px 64px 16px 16px;
+    margin-top: 128px;
+
+}
+
+.intro h1 {
+    color: var(--normalWhite);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3em;
+}
