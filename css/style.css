@@ -37,18 +37,12 @@ li {
 body {
   font-family: "Josefin Sans", sans-serif;
 }
-
+/* MENU */
 .menu {
   background-image: url("../img/image-hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 64px 0 128px 0;
-}
-
-@media (max-width: 739px) {
-  .menu {
-    background-image: url("../img/mobile/image-hero.jpg");
-  }
 }
 
 .menu-container {
@@ -81,6 +75,7 @@ body {
   font-family: "Alata", sans-serif;
 }
 
+/* SEÇÃO DA INTRO */
 .intro {
   border: 2px solid var(--normalWhite);
   max-width: 650px;
@@ -97,7 +92,13 @@ body {
   font-weight: 300;
 }
 
+/* MOBILE RESPONSIVOo */
+
 @media (max-width: 739px) {
+  .menu {
+    background-image: url("../img/mobile/image-hero.jpg");
+  }
+
   .intro {
     border: 2px solid var(--normalWhite);
     max-width: 100%;
@@ -135,7 +136,7 @@ body {
     text-align: right;
   }
 }
-/* SEÇÃO 1 */
+/* SEÇÃO 1FOTOGRAFIA COM TEXTO */
 
 .secao1 {
   max-width: 1200px;
@@ -214,7 +215,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 64px 16px 64px 16px;
+    padding: 64px 16px 32px 16px;
   }
 
   .text {
@@ -235,7 +236,9 @@ body {
 
   .text p {
     padding-top: 16px;
-    font-size: 1em;
+    font-size: 1.125em;
+    max-width: 265px;
+    margin: 0 auto;
   }
 }
 
@@ -271,6 +274,8 @@ body {
   font-weight: 300;
 }
 
+/* GALERIA DE FOTOS */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(150px, 1fr));
@@ -295,6 +300,8 @@ body {
   text-align: left;
   font-weight: 300;
 }
+
+/* FUNDO DE CADA DIV */
 
 #earth {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
@@ -335,24 +342,31 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
     url("../img/image-fisheye.jpg");
 }
+
+/* TABLET RESPONSIVO */
+
 @media (min-width: 740px) and (max-width: 1120px) {
   .item p {
     color: var(--normalWhite);
     font-size: 1.5em;
+    max-width: 150px;
   }
   .item {
     padding: 16px;
   }
 }
 
+/* MOBILE RESPONSIVO */
+
 @media (max-width: 739px) {
   .galeria {
-    padding: 64px 16px 0 16px;
+    padding: 64px 16px 64px 16px;
   }
 
   .menu-galeria {
     padding-bottom: 32px;
     justify-content: center;
+    flex-direction: column;
   }
 
   .menu-galeria h1 {
@@ -374,6 +388,7 @@ body {
   .item p {
     color: var(--normalWhite);
     font-size: 1.5em;
+    max-width: 150px;
   }
 
   #earth {
