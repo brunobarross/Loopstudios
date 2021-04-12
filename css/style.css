@@ -75,6 +75,10 @@ body {
   font-family: "Alata", sans-serif;
 }
 
+#inptMenu {
+  visibility: hidden;
+}
+
 /* SEÇÃO DA INTRO */
 .intro {
   border: 2px solid var(--normalWhite);
@@ -97,13 +101,22 @@ body {
 @media (max-width: 739px) {
   .menu {
     background-image: url("../img/mobile/image-hero.jpg");
+    padding: 0;
+    position: relative;
+    height: 95vh;
+  }
+
+  .blackintro {
+    background: #000;
+    height: 95vh;
   }
 
   .intro {
     border: 2px solid var(--normalWhite);
     max-width: 100%;
     padding: 32px;
-    margin: 64px 16px 64px 16px;
+    margin: 150px 16px 64px 16px;
+    display: block;
   }
 
   .intro h1 {
@@ -116,25 +129,71 @@ body {
   .nav-menu {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
-    align-content: flex-start;
+    align-items: center;
+    align-content: center;
+    padding: 32px 0;
   }
 
   .logo {
     margin-left: 0;
+    width: 150px;
+    z-index: auto;
   }
 
+  /* ANIMAÇÃO */
+
+  .animaDiv {
+    animation: anima-div 0.5s;
+  }
+
+  @keyframes anima-div {
+    from {
+      transform: translateY(-1000px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  /**/
+
   .nav-menu ul {
-    align-items: flex-end;
+    display: none;
+    align-items: flex-start;
     flex-direction: column;
     justify-content: baseline;
+    position: absolute;
+    left: 0;
+    top: 150px;
   }
   .nav-menu ul li {
+    margin-bottom: 32px;
   }
 
   .nav-menu ul li a {
-    text-align: right;
+    text-align: left;
+    font-size: 1.5em;
+    text-transform: uppercase;
   }
+
+  /* MENU-HAMBURGUER */
+
+  #inptMenu {
+    visibility: hidden;
+    position: absolute;
+    left: 84%;
+    top: 33px;
+    transform: rotate(0);
+  }
+
+  #inptMenu::after {
+    content: url("../img/icon-hamburger.svg");
+    display: block;
+    visibility: visible;
+    z-index: auto;
+  }
+
+  /**/
 }
 /* SEÇÃO 1FOTOGRAFIA COM TEXTO */
 

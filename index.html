@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
-    <header class="menu">
+<body onresize="menuMobile()">
+    <header class="menu" id="menu">
         <div class="menu-container">
-            <nav class="nav-menu">
-                <img src="img/logo.svg">
-                <ul>
+            <nav class="nav-menu" id="nav-menu">
+                <img src="img/logo.svg" class="logo">
+                <input type="checkbox" id="inptMenu" onclick="menuMobile()">
+                <ul id="menu-mobile">
+                    
                     <li><a href="#">About</a></li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Events</a></li>
@@ -23,7 +25,7 @@
                     <li><a href="#">Support</a></li>
                 </ul>
             </nav>
-            <div class="intro">
+            <div class="intro" id="intro">
                 <h1>IMMERSIVE EXPERIENCES THAT DELIVER</h1>
             </div>
         </div>
@@ -96,6 +98,8 @@
         </div>
         
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
